@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
+			<link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Permanent+Marker&display=swap" rel="stylesheet">
+			<link rel="stylesheet" type="text/css" href="../public/css/style.css">
+		<title>Walastik Pares</title>
+		<script languange= JavaScript>
+
+			function display()
+			{
+				var customer= frmOrder.txtcustomer.value;
+				var address= frmOrder.txtaddress.value;
+				var contact= frmOrder.txtcontact.value;
+				var pares= frmOrder.txtpares.value;
+				var paresupreme= frmOrder.txtparessupreme.value;
+				var mami= frmOrder.txtmami.value;
+				var mamisupreme= frmOrder.txtmamisupreme.value;
+				var sisig= frmOrder.txtsisig.value;
+				var silog= frmOrder.txtsilog.value;
+				var dew= frmOrder.txtdew.value;
+				var coke= frmOrder.txtcoke.value;
+				var egg= frmOrder.txtegg.value;
+				var tokwa= frmOrder.txttokwa.value;
+				var chili= frmOrder.txtchili.value;
+
+				var total= parseFloat(pares) + parseFloat(paresupreme) + parseFloat(mami) + 
+				parseFloat(mamisupreme) + parseFloat(sisig) + parseFloat(silog) + parseFloat(dew) + 
+				parseFloat(coke) + parseFloat(egg) + parseFloat(tokwa) + parseFloat(chili);
+
+
+				document.write("<center>-------------------------------------------------");
+				document.write("<center><br>WALASTIK PARES RECEIPT");
+				document.write("<center>-------------------------------------------------");
+				document.write("<br><br>Customer Name :" + customer);
+				document.write("<br><br>Address :" + address);
+				document.write("<br><br>Contact Number :" + contact);
+				document.write("<br><br>Total Amount :" + total);
+				document.write("<center>------------------------------------------------");
+				document.write("<center>Your order is now processing....");
+				document.write("<center>Thank you for ordering!");
+
+
+
+			}
+		</script>
+		</head>
+		<body>
+			<header>
+				<div class="content-wrapper"> 
+					<div class="logo">
+						<img src="../public/images/logo.png" alt="">
+					</div>
+				</div>
+					<div class="content-wrapper">
+						<div class="nav">
+							<ul>
+								<li><a href="homepage.html">HOME</a></li>
+								<li><a href="menu.html">MENU</a></li>
+								<li class="active"><a href="order.html">ORDER NOW</a></li>
+								<li><a href="about.html">ABOUT US</a></li>
+								<li><a href="contact.html">CONTACT US</a></li>
+							</ul>
+						</div>
+					</div>
+                </header>
+				<main>
+					<div class="content-wrapper">
+						<div class="form-wrapper">
+							<h1>WALASTIK PARES <span>Check out your order now:</span></h1>
+							<form name="frmOrder">
+								<label for="txtcustomer" onclick=txtcustomer>Customer's Name</label>
+								<input type="text" name="txtcustomer">
+
+								<label for="txtaddress" onclick=txtaddress>Address</label>
+								<input type="text" name="txtaddress">
+
+								<label for="txtcontact" onclick=txtcontact>Contact Number</label>
+								<input type="number" name="txtcontact">
+
+								<label for="choose-menu">Choose Main:</label>
+								
+								<h6><input type="checkbox" onclick=txtpares.value="60"> Walastik Pares - Php 60.00 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<input type="hidden" name="txtpares" value="0"></h6>
+									
+								<h6><input type="checkbox" onclick=txtparessupreme.value="80">&nbsp; Wakastik Pares Supreme - Php 80.00
+										<input type="hidden" name="txtparessupreme" value="0"></h6>
+								<br>
+								<h6><input type="checkbox" onclick=txtmami.value="60">&nbsp; Walastik Mami - Php 60.00 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<input type="hidden" name="txtmami" value="0"></h6>
+
+								<h6><input type="checkbox" onclick=txtmamisupreme.value="80">&nbsp;&nbsp; Walastik Mami Supreme - Php 80.00
+									<input type="hidden" name="txtmamisupreme" value="0"></h6>
+								<br>
+								<h6><input type="checkbox" onclick=txtsisig.value="80">&nbsp; Walastik Sisig - Php 80.00 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<input type="hidden" name="txtsisig" value="0"></h6>
+
+								<h6><input type="checkbox" onclick=txtsilog.value="75">&nbsp;&nbsp; Walastik Silog - Php 75.00&nbsp;&nbsp;
+									<input type="hidden" name="txtsilog" value="0"></h6>
+
+								<label for="choose-size">Choose Drinks:</label>
+								<h6><input type="checkbox" onclick=txtdew.value="20">&nbsp;&nbsp; Mountain Dew - Php 20.00
+									<input type="hidden" name="txtdew" value="0"></h6>
+								<br>
+
+								<h6><input type="checkbox" onclick=txtcoke.value="20">&nbsp;&nbsp; Coke - Php 20.00
+									<input type="hidden" name="txtcoke" value="0"></h6>
+
+								<label for="choose-addons">Add Ons: (optional)</label>
+								<h6><input type="checkbox" onclick=txtegg.value="25">&nbsp;&nbsp; Boiled Egg - Php 25.00
+									<input type="hidden" name="txtegg" value="0"></h6>
+								<br>
+								<h6><input type="checkbox" onclick=txttokwa.value="25">&nbsp;&nbsp; Tokwa - Php 25.00
+									<input type="hidden" name="txttokwa" value="0"></h6>
+								<br>
+								<h6><input type="checkbox" onclick=txtchili.value="30">&nbsp;&nbsp; Extra Chili Sauce - Php 30.00
+									<input type="hidden" name="txtchili" value="0"></h6>
+								<br>						
+								<input type= "submit"  value="COMPUTE TOTAL AMOUNT" onclick= display();>								
+					
+							</form>
+							</div>
+					</div>
+				</main>
+	        </body>
+    </html>
